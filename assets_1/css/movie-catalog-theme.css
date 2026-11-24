@@ -1,0 +1,87 @@
+/* Shared Sairam navy and gold palette for the Movies and Trailers pages. */
+body.movie-catalog-page {
+  --premium-ink: #06183f;
+  --premium-deep: #0a2757;
+  --premium-surface: #0c2d63;
+  --premium-surface-raised: #174982;
+  --premium-cyan: #e8c978;
+  --premium-cyan-soft: #f7f0dc;
+  --premium-text: #f7f4ec;
+  --premium-muted: #c7d0e1;
+  --premium-border: rgba(232, 201, 120, .26);
+  --premium-page-gradient: linear-gradient(135deg, #06183f 0%, #0d3978 54%, #071b45 100%);
+  --premium-surface-gradient: linear-gradient(135deg, #092554 0%, #123d78 100%);
+  --premium-card-gradient: linear-gradient(145deg, #0b2a5a 0%, #123d78 100%);
+  background: var(--premium-page-gradient) !important;
+  color: var(--premium-text);
+}
+
+body.movie-catalog-page .movie_section,
+body.movie-catalog-page section.bg-white,
+body.movie-catalog-page section.bg-light,
+body.movie-catalog-page .latest-trailers-gold-wrapper {
+  background: var(--premium-page-gradient) !important;
+  background-image: var(--premium-page-gradient) !important;
+  color: var(--premium-text) !important;
+}
+
+body.movie-catalog-page .section_header,
+body.movie-catalog-page .movie_container,
+body.movie-catalog-page .trailers-container {
+  color: var(--premium-text);
+}
+
+body.movie-catalog-page .section_title,
+body.movie-catalog-page .trailers-title,
+body.movie-catalog-page .movie_title,
+body.movie-catalog-page .movie-title,
+body.movie-catalog-page .section_header h2 {
+  color: var(--premium-cyan-soft) !important;
+  -webkit-text-fill-color: var(--premium-cyan-soft) !important;
+}
+
+body.movie-catalog-page .section_subtitle,
+body.movie-catalog-page .trailers-note,
+body.movie-catalog-page .movie_genre,
+body.movie-catalog-page .trailer-subtitle {
+  color: var(--premium-muted) !important;
+}
+
+body.movie-catalog-page .movie_card,
+body.movie-catalog-page .trailer-card,
+body.movie-catalog-page .watchmode-empty {
+  background: var(--premium-card-gradient) !important;
+  background-image: var(--premium-card-gradient) !important;
+  border-color: var(--premium-border) !important;
+  color: var(--premium-text) !important;
+}
+
+body.movie-catalog-page .movie_content,
+body.movie-catalog-page .card-meta {
+  background: transparent !important;
+  color: var(--premium-text) !important;
+}
+
+body.movie-catalog-page .book_movie_btn,
+body.movie-catalog-page .tab-btn.active {
+  background: linear-gradient(135deg, #b88932 0%, #f0cc72 100%) !important;
+  color: #08234d !important;
+  border-color: #f0cc72 !important;
+}
+
+body.movie-catalog-page .trailers-gold-modal .modal-content {
+  background-color: var(--premium-deep) !important;
+  border-color: var(--premium-cyan) !important;
+}
+
+body.movie-catalog-page .trailers-gold-modal .modal-body {
+  background: var(--premium-ink) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.movie-catalog-page *,
+  body.movie-catalog-page *::before,
+  body.movie-catalog-page *::after {
+    scroll-behavior: auto !important;
+  }
+}

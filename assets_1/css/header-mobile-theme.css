@@ -1,0 +1,339 @@
+/* =========================================================
+   HEADER MOBILE / TAB THEME PATCH
+   Link AFTER style.css and visual-effects.css in header.php:
+   <link rel="stylesheet" href="assets/css/header-mobile-theme.css">
+   Only touches: top marquee, social icons, side-menu nav links, and footer layout.
+   ========================================================= */
+
+:root {
+    --hdr-gold: #f5c542;
+    --hdr-grad: linear-gradient(90deg, #b81f55 0%, #7a2fa6 50%, #2f49c9 100%);
+}
+
+
+/* ---------------------------------------------------------
+   1) TOP MARQUEE (mobile + tab) - premium gradient, not black
+   --------------------------------------------------------- */
+@media (max-width: 991.98px) {
+
+    .top-contact-marquee,
+    .top-contact-marquee .mobile-top-marquee,
+    .top-contact-marquee .mobile-marquee-track {
+        background: var(--hdr-grad) !important;
+    }
+
+    .top-contact-marquee {
+        border-bottom: 1px solid rgba(245, 197, 66, .55);
+    }
+
+    .top-contact-marquee .mobile-top-marquee {
+        display: block;
+        padding: 7px 0;
+        line-height: 1;
+    }
+
+    .top-contact-marquee .top-info-item,
+    .top-contact-marquee .top-info-item span,
+    .top-contact-marquee .top-info-item > a {
+        color: #fff !important;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .top-contact-marquee .icon-gold,
+    .top-contact-marquee .top-info-item i.icon-gold {
+        color: var(--hdr-gold) !important;
+    }
+
+    .top-contact-marquee .marquee-divider {
+        color: var(--hdr-gold) !important;
+        opacity: .9;
+        margin: 0 14px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   2) HEADER SOCIAL ICONS - use the footer brands and sizing
+   --------------------------------------------------------- */
+.mobile-marquee-social,
+.top-bar-social-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px !important;
+    vertical-align: middle;
+}
+
+.mobile-marquee-social a,
+.top-bar-social-icons a {
+    width: 40px !important;
+    height: 40px !important;
+    flex: 0 0 40px !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    box-shadow: none !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #fff !important;
+    font-size: 16px !important;
+    text-decoration: none;
+    transition: transform .3s ease;
+}
+
+.mobile-marquee-social a i,
+.top-bar-social-icons a i {
+    color: #fff !important;
+    line-height: 1;
+}
+
+.top-contact-marquee .mobile-marquee-social a i,
+.top-bar-bg .top-bar-social-icons a i {
+    color: #fff !important;
+}
+
+.mobile-marquee-social a:hover,
+.top-bar-social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+.mobile-marquee-social a[aria-label="Facebook"],
+.top-bar-social-icons a[aria-label="Facebook"] {
+    background: #1877f2 !important;
+}
+
+.mobile-marquee-social a[aria-label="Instagram"],
+.top-bar-social-icons a[aria-label="Instagram"] {
+    background: linear-gradient(135deg,
+        #feda75 0%, #fa7e1e 22%, #d62976 52%, #962fbf 76%, #4f5bd5 100%) !important;
+}
+
+.mobile-marquee-social a[aria-label="LinkedIn"],
+.top-bar-social-icons a[aria-label="LinkedIn"] {
+    background: #0a66c2 !important;
+}
+
+.mobile-marquee-social a[aria-label="YouTube"],
+.top-bar-social-icons a[aria-label="YouTube"] {
+    background: #ff0000 !important;
+}
+
+@media (max-width: 767.98px) {
+    .social_icons {
+        gap: 4px !important;
+    }
+
+    .social_icons a,
+    .top-bar-social-icons a,
+    .top-contact-marquee .mobile-marquee-social a {
+        width: 22px !important;
+        height: 22px !important;
+        flex: 0 0 22px !important;
+    }
+
+    .top-bar-social-icons,
+    .top-contact-marquee .mobile-marquee-social {
+        gap: 4px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .social_icons {
+        gap: 6px !important;
+    }
+
+    .social_icons a,
+    .top-bar-social-icons a,
+    .top-contact-marquee .mobile-marquee-social a {
+        width: 32px !important;
+        height: 32px !important;
+        flex: 0 0 32px !important;
+    }
+
+    .top-bar-social-icons,
+    .top-contact-marquee .mobile-marquee-social {
+        gap: 6px !important;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   3) SIDE MENU - nav links (Home / Movies / Trailers / 3D)
+      shown on mobile + tab only (hidden on desktop >= 992px)
+   --------------------------------------------------------- */
+a.movie-menu-item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-decoration: none !important;
+    color: #fff;
+}
+
+a.movie-menu-item:hover,
+a.movie-menu-item:focus {
+    color: #fff;
+}
+
+a.movie-menu-item .movie-menu-icon i {
+    color: inherit;
+}
+
+
+/* ---------------------------------------------------------
+   4) HOMEPAGE FOOTER - compact mobile and tablet layouts
+   --------------------------------------------------------- */
+.footer-logo-link {
+    display: inline-flex;
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .footer.footer-mobile-quick-links-only {
+        padding: 28px 0 24px;
+    }
+
+    .footer-mobile-quick-links-only .footer-support,
+    .footer-mobile-quick-links-only > .movie_container > hr,
+    .footer-mobile-quick-links-only .copyright {
+        display: none !important;
+    }
+
+    .footer-mobile-quick-links-only .footer-brand {
+        flex: 0 0 36%;
+        width: 36%;
+        max-width: 36%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-mobile-quick-links-only .footer-quick-links {
+        flex: 0 0 22%;
+        width: 22%;
+        max-width: 22%;
+    }
+
+    .footer-mobile-quick-links-only .footer-contact {
+        flex: 0 0 42%;
+        width: 42%;
+        max-width: 42%;
+    }
+
+    .footer-mobile-quick-links-only .footer-logo-link {
+        margin-bottom: 8px;
+    }
+
+    .footer-mobile-quick-links-only .footer-logo {
+        width: 146px;
+    }
+
+    .footer-mobile-quick-links-only .footer-brand > p {
+        display: none;
+    }
+
+    .footer-mobile-quick-links-only .footer-brand .social_icons {
+        display: flex;
+        gap: 6px;
+        margin: 0;
+        flex-wrap: nowrap;
+    }
+
+    .footer-mobile-quick-links-only .footer-brand .social_icons a {
+        flex: 0 0 32px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .footer-mobile-quick-links-only .footer-quick-links h5,
+    .footer-mobile-quick-links-only .footer-contact h5 {
+        margin-bottom: 6px;
+    }
+
+    .footer-mobile-quick-links-only .footer-quick-links ul li {
+        margin-bottom: 3px;
+    }
+
+    .footer-mobile-quick-links-only .footer-quick-links ul li a {
+        line-height: 1.3;
+    }
+
+    .footer-mobile-quick-links-only .footer-contact p {
+        margin-bottom: 4px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer.footer-mobile-quick-links-only {
+        padding: 18px 0;
+    }
+
+    .footer-mobile-quick-links-only .footer-support,
+    .footer-mobile-quick-links-only .footer-contact,
+    .footer-mobile-quick-links-only > .movie_container > hr,
+    .footer-mobile-quick-links-only .copyright {
+        display: none !important;
+    }
+
+    .footer-mobile-quick-links-only .footer-brand {
+        display: flex;
+        flex: 0 0 50%;
+        width: 50%;
+        max-width: 50%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .footer-mobile-quick-links-only .footer-quick-links {
+        flex: 0 0 50%;
+        width: 50%;
+        max-width: 50%;
+        text-align: left;
+    }
+
+    .footer-mobile-quick-links-only .footer-logo-link {
+        margin-bottom: 8px;
+    }
+
+    .footer-mobile-quick-links-only .footer-logo {
+        width: 105px;
+    }
+
+    .footer-mobile-quick-links-only .footer-brand > p {
+        display: none;
+    }
+
+    .footer-mobile-quick-links-only .footer-brand .social_icons {
+        display: flex;
+        gap: 4px;
+        margin: 0;
+        flex-wrap: nowrap;
+    }
+
+    .footer-mobile-quick-links-only .footer-brand .social_icons a {
+        flex: 0 0 22px;
+        width: 22px;
+        height: 22px;
+        font-size: 11px;
+    }
+
+    .footer-mobile-quick-links-only .footer-quick-links h5 {
+        margin-bottom: 8px;
+    }
+
+    .footer-mobile-quick-links-only .footer-quick-links ul li {
+        margin-bottom: 3px;
+    }
+
+    .footer-mobile-quick-links-only .footer-quick-links ul li a {
+        line-height: 1.3;
+    }
+}
