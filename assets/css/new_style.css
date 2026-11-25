@@ -9276,3 +9276,7 @@ header #siteNav {
 .footer_new_section {
   border-top-color: rgba(232, 201, 120, .3);
 }
+
+#genie .lamp .mid > .rare.big {
+  font-size:clamp(30px,min(13.2vw,24vh),260px) !important;
+}
