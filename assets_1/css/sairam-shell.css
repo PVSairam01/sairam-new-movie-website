@@ -113,3 +113,7 @@ body {
 @media (max-width: 850px) {
   .sairam-site-header { height: 82px; min-height: 82px; }
 }
+
+@media (max-width: 991.98px) {
+  .sairam-site-header > a.btn { display: none !important; }
+}
