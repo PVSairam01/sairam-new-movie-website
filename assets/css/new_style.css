@@ -6046,7 +6046,7 @@ header .btn b,.index_first_section .btn b{box-shadow:inset 0 0 0 1px rgba(232,20
 /* SERVICES: luxurious paper panels and gold headings */
 .px-help{background:linear-gradient(180deg,#F8F8F5 0%,#f1ecdf 100%)!important;color:#0140a7!important;border-top:1px solid rgba(152,104,32,.2)}
 .px-help .px-hd{position:relative}
-.px-help .px-hd:before{content:"BHAVI / CREATIVE STUDIO";display:block;font:700 12px/1.5 'Poppins',sans-serif;letter-spacing:.2em;color:#986820;margin-bottom:24px}
+.px-help .px-hd:before{content:"MOVIES / CREATIVE STUDIO";display:block;font:700 12px/1.5 'Poppins',sans-serif;letter-spacing:.2em;color:#986820;margin-bottom:24px}
 .px-help h2{color:#0140a7!important;line-height:1.17!important}
 .px-help .px-p{color:#0140a7!important;line-height:1.8}
 .px-help .px-rows>*{border-color:rgba(1, 64, 167,.14)}
@@ -7420,6 +7420,7 @@ html{scroll-behavior:auto !important}
 .bc-white-logo,.px-zlogo-main,.px-zlogo-sub{display:none !important}
 
 /* logo zoom section */
+#px-zoom .px-zlogo,
 #px-zoom .px-zlogo-svg{
   display:block;
   width:min(554px,80vw) !important;
@@ -7431,6 +7432,7 @@ html{scroll-behavior:auto !important}
   transform-origin:50% 50%;
 }
 @media (max-width:767px){
+  #px-zoom .px-zlogo,
   #px-zoom .px-zlogo-svg{width:min(78vw,300px) !important}
 }
 
@@ -8325,6 +8327,7 @@ html{scroll-behavior:auto !important}
     box-sizing:border-box!important;
     padding:clamp(78px,12svh,108px) 18px 28px!important;
   }
+  #px-zoom .px-zlogo,
   #px-zoom .px-zlogo-svg{
     display:block!important;
     width:min(78vw,300px)!important;
@@ -8661,14 +8664,16 @@ html{scroll-behavior:auto !important}
 }
 
 /* Center the px-zoom logo and tagline as one stack on the requested desktop ranges. */
-@media(min-width:992px) and (max-width:1200px), (min-width:1400px){
+@media(min-width:992px){
     #px-zoom .px-zstage{
         display:flex!important;
         flex-direction:column!important;
         justify-content:center!important;
         align-items:center!important;
         gap:clamp(20px,2.2vw,34px)!important;
+        box-sizing:border-box!important;
     }
+    #px-zoom .px-zlogo,
     #px-zoom .px-zlogo-svg{
         flex:none!important;
         margin:0!important;
@@ -8786,6 +8791,7 @@ header #siteNav>a.is-current{
         padding:0 24px!important;
         box-sizing:border-box!important;
     }
+    #px-zoom .px-zlogo,
     #px-zoom .px-zlogo-svg{
         display:block!important;
         width:min(554px,80vw)!important;

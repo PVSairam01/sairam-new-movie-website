@@ -74,7 +74,7 @@
 
     <!-- Bottom Copyright -->
     <div class="footer_new_section_bottom">
-      <p class="footer_new_section_copyright">ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© 2026 Sairam Movie Hub. All Rights Reserved.</p>
+      <p class="footer_new_section_copyright">&copy; 2026 Sairam Movie Hub. All Rights Reserved.</p>
     </div>
 
   </div>
@@ -384,7 +384,7 @@
 
     $('#f').onsubmit = function(e) {
       e.preventDefault();
-      $('.go').textContent = 'ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“'
+      $('.go').textContent = '\u2192'
     };
 
     /* ---- animations ---- */
@@ -2052,7 +2052,7 @@
       return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;')
     };
     tr.innerHTML = NEWS.map(function(n) {
-      return '<a class="nws-c" href="' + U + n[4] + '/" target="_blank" rel="noopener">' + (n[5] ? '<img src="' + e(n[5]) + '" alt="" loading="lazy">' : '') + '<div class="nws-t">' + (n[0] ? '<small>' + e(n[0]) + '</small>' : '') + '<h4>' + e(n[1]) + '</h4><p>' + e(n[2]) + '</p><span><i class="fa-regular fa-user"></i>' + A + '<b>ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â·</b><i class="fa-regular fa-calendar"></i>' + n[3] + '</span></div></a>'
+      return '<a class="nws-c" href="' + U + n[4] + '/" target="_blank" rel="noopener">' + (n[5] ? '<img src="' + e(n[5]) + '" alt="" loading="lazy">' : '') + '<div class="nws-t">' + (n[0] ? '<small>' + e(n[0]) + '</small>' : '') + '<h4>' + e(n[1]) + '</h4><p>' + e(n[2]) + '</p><span><i class="fa-regular fa-user"></i>' + A + '<b>&middot;</b><i class="fa-regular fa-calendar"></i>' + n[3] + '</span></div></a>'
     }).join('');
     dt.innerHTML = NEWS.map(function() {
       return '<i></i>'
