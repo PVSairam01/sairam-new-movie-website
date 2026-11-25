@@ -79,6 +79,7 @@
 .hs-sticky,:root body .hs-sticky { background:#071b45 !important; }
 .hs-left-pane,:root body .hs-left-pane { background:#071b45 !important; }
 .hs-left-title,:root body .hs-left-title { color:#f7f4ec !important; -webkit-text-stroke-color:#f7f4ec !important; }
+.hs-exit-title,:root body .hs-exit-title { color:#f7f4ec !important; }
 .hs-left-desc,:root body .hs-left-desc { color:#c7d0e1 !important; }
 .hs-left-divider,:root body .hs-left-divider { background:#c89a3d !important; }
 .hs-item:nth-child(1),:root body .hs-item:nth-child(1),.hs-item:nth-child(2),:root body .hs-item:nth-child(2),.hs-item:nth-child(3),:root body .hs-item:nth-child(3) { background:#0b2858 !important; }
@@ -112,6 +113,93 @@
 }
 @media(max-width:991px) { .srm-about-lens .ab-hero-scroll { display:none; } .srm-about-lens .ab-hero-foot { flex-wrap:wrap; } }
 @media(prefers-reduced-motion:reduce) { .srm-about-lens .ab-hero-lens svg,.srm-about-lens .ab-hero-readout.is-br i,.srm-about-lens .ab-hero-scroll i { animation:none; } }
+
+.srm-about-lens.ab-hero {
+  box-sizing:border-box;
+  padding-top:150px !important;
+}
+
+.srm-about-lens .ab-hero-layer,
+.srm-about-lens .ab-hero-see-type {
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(46px,11vw,210px);
+  font-weight:700;
+  letter-spacing:-.025em;
+  line-height:.9;
+  text-transform:uppercase;
+  white-space:normal;
+}
+
+.srm-about-lens .ab-hero-line {
+  width:100%;
+  padding-top:.12em;
+}
+
+.srm-about-lens .ab-hero-line.is-offset {
+  padding-left:clamp(16px,7vw,88px);
+}
+
+.srm-about-lens .ab-hero-line.is-offset > span {
+  max-width:100%;
+  color:#e8c978;
+  font-family:"Caveat",cursive;
+  font-size:.82em;
+  font-weight:700;
+  letter-spacing:0;
+  line-height:1;
+  text-transform:none;
+  white-space:normal;
+}
+
+.hs-left-title,
+.hs-item-title,
+.hs-brand-panel-name,
+.hs-exit-title,
+.ws-title,
+.wp-card-title {
+  font-family:"Playfair Display",Georgia,serif !important;
+  font-weight:700 !important;
+  letter-spacing:-.02em;
+  text-transform:none;
+}
+
+.hs-left-title,
+.hs-exit-title {
+  -webkit-text-stroke:0 !important;
+}
+
+.hs-exit-title > span {
+  display:block;
+}
+
+.hs-left-title .hs-title-accent,
+.hs-exit-title .hs-title-accent {
+  color:#e8c978 !important;
+  font-family:"Caveat",cursive !important;
+  font-size:1.08em;
+  font-weight:700 !important;
+  letter-spacing:0 !important;
+  line-height:.9;
+  text-transform:none !important;
+}
+
+@media (max-width: 1100px) {
+  .srm-about-lens.ab-hero { padding-top:110px !important; }
+}
+
+@media (max-width: 850px) {
+  .srm-about-lens.ab-hero { padding-top:96px !important; }
+}
+
+@media (min-width: 992px) and (max-height: 850px) {
+  .srm-about-lens.ab-hero { padding-bottom:44px !important; }
+  .srm-about-lens .ab-hero-stage {
+    min-height:400px;
+    margin-block:12px;
+    padding-block:clamp(36px,6vh,48px);
+  }
+  .srm-about-lens .ab-hero-foot { padding-top:20px; }
+}
 
 /* Keep the two wide showcase posters fully visible at every gallery size. */
 .hs-item[data-index="0"] .hs-image-wrap,

@@ -37,7 +37,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=Instrument+Sans:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=DM+Sans:wght@400;500;700&family=Instrument+Sans:wght@500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets_1/css/prception-case-motion.css?v=<?= filemtime(__DIR__ . '/assets_1/css/prception-case-motion.css') ?>">
     <link rel="stylesheet" href="assets_1/css/prception-movie-overrides.css?v=<?= filemtime(__DIR__ . '/assets_1/css/prception-movie-overrides.css') ?>">
     <link rel="stylesheet" href="assets_1/css/movie-catalog-theme.css?v=<?= filemtime(__DIR__ . '/assets_1/css/movie-catalog-theme.css') ?>">

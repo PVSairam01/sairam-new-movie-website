@@ -39,7 +39,7 @@
               <div class="hs-left-title-wrap">
                 <h1 class="hs-left-title">
                   <span>Movie</span>
-                  <span>Stories</span>
+                  <span class="hs-title-accent">Stories</span>
                 </h1>
               </div>
               <p class="hs-left-desc">Discover Telugu favourites, popular releases, and films made for the big screen.</p>
@@ -124,7 +124,7 @@
               <!-- Right panel: slides in from right once hero fully covers the image zone -->
               <div id="hs-exit-right">
                 <span class="hs-exit-eyebrow">Movie Collection</span>
-                <h2 class="hs-exit-title">Telugu<br>Cinema</h2>
+                <h2 class="hs-exit-title"><span>Telugu</span><span class="hs-title-accent">Cinema</span></h2>
                 <p class="hs-exit-desc">Explore memorable performances, bold stories, and new releases for the big screen.</p>
                 <a href="latest-movies.php" class="hs-exit-cta">Browse Movies</a>
               </div>
