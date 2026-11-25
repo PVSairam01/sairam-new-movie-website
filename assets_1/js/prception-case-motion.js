@@ -9,6 +9,7 @@
       var curEl, hintEl, leftPaneEl, exitEl, exitHeroEl, exitClipEl, exitRightEl;
 
       var IS_MOBILE = window.innerWidth < 1024;
+      var IS_MOBILE_CARD_LAYOUT = window.innerWidth < 992;
 
       // Keep the gallery readable if a motion dependency is delayed or blocked.
       // The matching CSS presents the cards in normal document flow by default.
@@ -257,7 +258,9 @@
                 mobileRevealObserver.unobserve(entry.target);
               });
             }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-            document.querySelectorAll('.hs-branding-item, #hs-branding .hs-brand-panel').forEach(function (el, index) {
+            var revealTargets = '.hs-branding-item, #hs-branding .hs-brand-panel';
+            if (IS_MOBILE_CARD_LAYOUT) revealTargets += ', #hs-track .hs-item';
+            document.querySelectorAll(revealTargets).forEach(function (el, index) {
               el.classList.add('mob-anim');
               el.style.transitionDelay = (index * 0.07) + 's';
               mobileRevealObserver.observe(el);
@@ -311,17 +314,19 @@
 
         gsap.registerPlugin(ScrollTrigger);
 
-        ScrollTrigger.create({
-          trigger: outer,
-          start: afterOpeningHero,
-          end: function () { return '+=' + (NUM_CARDS + 1) * window.innerHeight; },
-          pin: '#hs-sticky',
-          pinSpacing: true,
-          scrub: 1.8,
-          onUpdate:    function (self) { updateCards(self.progress); },
-          onLeave:     function () { updateCards(1); },
-          onLeaveBack: function () { updateCards(0); }
-        });
+        if (!IS_MOBILE_CARD_LAYOUT) {
+          ScrollTrigger.create({
+            trigger: outer,
+            start: afterOpeningHero,
+            end: function () { return '+=' + (NUM_CARDS + 1) * window.innerHeight; },
+            pin: '#hs-sticky',
+            pinSpacing: true,
+            scrub: 1.8,
+            onUpdate:    function (self) { updateCards(self.progress); },
+            onLeave:     function () { updateCards(1); },
+            onLeaveBack: function () { updateCards(0); }
+          });
+        }
 
         // ── Unified shrink ScrollTrigger ─────────────────────────
         // When the branding section scrolls into view, the last case-study card,
@@ -355,6 +360,9 @@
               if (brandingColEl) {
                 gsap.set(brandingColEl, { width: w + 'vw' });
                 if (IS_MOBILE) brandingColEl.style.setProperty('--srm-mobile-brand-width', w + 'vw');
+                if (window.innerWidth >= 768 && window.innerWidth < 992) {
+                  brandingSection.style.setProperty('--srm-mobile-brand-width', w + 'vw');
+                }
               }
             }
           });

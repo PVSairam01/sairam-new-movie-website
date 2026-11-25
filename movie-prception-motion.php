@@ -137,7 +137,11 @@
 <section id="hs-branding">
           <div class="hs-branding-col" id="hs-branding-col">
             <div class="hs-branding-item">
-              <img src="assets_1/images/movies/Avengers-end-game.jfif" alt="Now Showing">
+              <picture>
+                <source media="(max-width: 767.5px)" srcset="assets_1/images/movies/Avengers-assemble.webp">
+                <source media="(min-width: 768px) and (max-width: 991.5px)" srcset="assets_1/images/movies/movie1.jpg">
+                <img src="assets_1/images/movies/Avengers-end-game.jfif" alt="Now Showing">
+              </picture>
               <span class="hs-branding-item-label">Now Showing</span>
               <div class="hs-brand-mob-overlay">
                 <p class="hs-brand-panel-tag">Movie · Collection</p>
@@ -146,7 +150,11 @@
               </div>
             </div>
             <div class="hs-branding-item">
-              <img src="assets_1/images/movies/pushpa-2-movie.jpg" alt="Telugu Hits">
+              <picture>
+                <source media="(max-width: 767.5px)" srcset="assets_1/images/movies/spiderman-noway-home-movie.jpg">
+                <source media="(min-width: 768px) and (max-width: 991.5px)" srcset="assets_1/images/movies/Pushpa-2.png">
+                <img src="assets_1/images/movies/pushpa-2-movie.jpg" alt="Telugu Hits">
+              </picture>
               <span class="hs-branding-item-label">Telugu Hits</span>
               <div class="hs-brand-mob-overlay">
                 <p class="hs-brand-panel-tag">Telugu · Cinema</p>
@@ -155,7 +163,11 @@
               </div>
             </div>
             <div class="hs-branding-item">
-              <img src="assets_1/images/movies/devara-1-movie.webp" alt="Blockbusters">
+              <picture>
+                <source media="(max-width: 767.5px)" srcset="assets_1/images/movies/Avengers-end-game.jfif">
+                <source media="(min-width: 768px) and (max-width: 991.5px)" srcset="assets_1/images/movies/devara-1.png">
+                <img src="assets_1/images/movies/devara-1-movie.webp" alt="Blockbusters">
+              </picture>
               <span class="hs-branding-item-label">Blockbusters</span>
               <div class="hs-brand-mob-overlay">
                 <p class="hs-brand-panel-tag">Action · Adventure</p>
@@ -164,7 +176,10 @@
               </div>
             </div>
             <div class="hs-branding-item">
-              <img src="assets_1/images/movies/kalki-poster.png" alt="New Releases">
+              <picture>
+                <source media="(max-width: 767.5px)" srcset="assets_1/images/movies/movie4.jpg">
+                <img src="assets_1/images/movies/kalki-poster.png" alt="New Releases">
+              </picture>
               <span class="hs-branding-item-label">New Releases</span>
               <div class="hs-brand-mob-overlay">
                 <p class="hs-brand-panel-tag">New · Stories</p>
