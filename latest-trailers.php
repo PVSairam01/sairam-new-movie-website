@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="assets_1/css/prception-case-motion.css?v=<?= filemtime(__DIR__ . '/assets_1/css/prception-case-motion.css') ?>">
     <link rel="stylesheet" href="assets_1/css/prception-movie-overrides.css?v=<?= filemtime(__DIR__ . '/assets_1/css/prception-movie-overrides.css') ?>">
     <link rel="stylesheet" href="assets_1/css/movie-catalog-theme.css?v=<?= filemtime(__DIR__ . '/assets_1/css/movie-catalog-theme.css') ?>">
+    <link rel="stylesheet" href="assets_1/css/movie-image-fit.css?v=<?= filemtime(__DIR__ . '/assets_1/css/movie-image-fit.css') ?>">
 </head>
 
 <body class="movie-catalog-page">

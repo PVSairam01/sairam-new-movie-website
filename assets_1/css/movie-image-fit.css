@@ -1,0 +1,146 @@
+/* =========================================================
+   MOVIE IMAGE FIT - nothing cropped (PRception case-study style)
+   Desktop + 992px-1200px only. Mobile / small tablet untouched.
+   Load AFTER prception-movie-overrides.css and movie-catalog-theme.css
+   File location: assets_1/css/movie-image-fit.css
+   ========================================================= */
+
+@media (min-width: 992px) {
+
+  /* ---------- 1) "Movie Stories" gallery cards (.hs-item) ----------
+     JS controls the frame size. The poster is shown FULL (contain) and the
+     empty space is filled with a blurred copy of the same poster.        */
+  .hs-outer .hs-image-wrap {
+    background: #071b45 !important;
+    isolation: isolate;
+  }
+
+  .hs-outer .hs-image-wrap::before {
+    content: "" !important;
+    position: absolute;
+    inset: -24px;
+    z-index: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(22px) brightness(.5);
+  }
+
+  .hs-outer .hs-item[data-index="0"] .hs-image-wrap::before { background-image: url("../images/movies/Avengers-end-game.jfif"); }
+  .hs-outer .hs-item[data-index="1"] .hs-image-wrap::before { background-image: url("../images/movies/pushpa-2-movie.jpg"); }
+  .hs-outer .hs-item[data-index="2"] .hs-image-wrap::before { background-image: url("../images/movies/devara-1-movie.webp"); }
+
+  .hs-outer .hs-image-wrap img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  /* hover zoom would re-crop the poster edges */
+  .hs-outer .hs-item:hover .hs-image-wrap img {
+    transform: none !important;
+  }
+
+
+  /* ---------- 2) Branding column (4 stacked images) ---------- */
+  #hs-branding .hs-branding-item {
+    background: #071b45;
+    isolation: isolate;
+  }
+
+  #hs-branding .hs-branding-item::before {
+    content: "";
+    position: absolute;
+    inset: -24px;
+    z-index: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(22px) brightness(.5);
+  }
+
+  #hs-branding .hs-branding-col .hs-branding-item:nth-child(1)::before { background-image: url("../images/movies/Avengers-end-game.jfif"); }
+  #hs-branding .hs-branding-col .hs-branding-item:nth-child(2)::before { background-image: url("../images/movies/pushpa-2-movie.jpg"); }
+  #hs-branding .hs-branding-col .hs-branding-item:nth-child(3)::before { background-image: url("../images/movies/devara-1-movie.webp"); }
+  #hs-branding .hs-branding-col .hs-branding-item:nth-child(4)::before { background-image: url("../images/movies/kalki-poster.png"); }
+
+  #hs-branding .hs-branding-item img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  #hs-branding .hs-branding-item:hover img {
+    transform: none !important;
+  }
+
+  #hs-branding .hs-branding-item-label {
+    z-index: 2;
+  }
+
+
+  /* ---------- 3) Exit hero (Kalki poster that slides up) ---------- */
+  #hs-exit-hero {
+    background: #071b45 !important;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  #hs-exit-hero::before {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    z-index: 0;
+    background: url("../images/movies/kalki-poster.png") center / cover no-repeat;
+    filter: blur(22px) brightness(.5);
+  }
+
+  #hs-exit-hero img {
+    position: relative;
+    z-index: 1;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  #hs-exit-hero .hs-exit-brand-label {
+    z-index: 2;
+  }
+
+
+  /* ---------- 4) Movie showcase cards (.wp-card-video) ----------
+     Already natural-ratio (width/height auto); just make sure it never crops. */
+  .wp-card-video {
+    object-fit: contain !important;
+  }
+}
+
+
+/* =========================================================
+   MOVE GALLERY IMAGES DOWN - away from the fixed header
+   --hs-img-shift = extra space between header and image area.
+   Increase / decrease this one value to tune (e.g. 70px, 110px).
+   margin-top is used (not transform), so the JS animation that
+   drives top / height / left / width is not affected.
+   ========================================================= */
+:root {
+  --hs-img-shift: clamp(56px, 8vh, 100px);
+}
+
+@media (min-width: 992px) {
+  .hs-outer .hs-image-wrap {
+    margin-top: var(--hs-img-shift) !important;
+  }
+
+  /* text strip always stays above the (shifted) image area */
+  .hs-outer .hs-item-meta {
+    z-index: 3;
+  }
+}
